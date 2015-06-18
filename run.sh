@@ -11,9 +11,9 @@ docker rm -f magento2
 docker run \
     --name magento2 \
     -i -t \
-    -p 8899:80 \
+    -p 80:80 \
     --link mysql-magento:mysql \
-    -e PUBLIC_HOST=magento.ruebenramirez.com:8899 \
+    -e PUBLIC_HOST=magento.ruebenramirez.com \
     -e MYSQL_USER=root \
     -e MYSQL_PASSWORD=admin \
     docker-magento2-demo-apache
